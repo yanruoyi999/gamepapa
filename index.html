@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Survivors - Action-Packed Survival Game | GamePapa</title>
+    <meta name="description" content="Play Monster Survivors online for free - an intense survival game where you battle endless waves of monsters with evolving abilities and powerful weapons.">
+    <link rel="canonical" href="https://gamepapa.online/">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* 苹果风格配色 */
+        :root {
+            --apple-blue: #0066CC;
+            --apple-light-gray: #F5F5F7;
+            --apple-dark-gray: #86868B;
+            --apple-red: #FF3B30;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--apple-light-gray);
+            color: #333;
+        }
+        
+        .header-bg {
+            background: linear-gradient(135deg, var(--apple-blue), #004080);
+        }
+        
+        .game-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .game-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .game-iframe {
+                height: 450px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .game-iframe {
+                height: 350px;
+            }
+        }
+        
+        .btn-primary {
+            background-color: var(--apple-blue);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #004b99;
+            transform: translateY(-2px);
+        }
+        
+        .feature-card {
+            border-left: 4px solid var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-700">GamePapa</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#game" class="hover:text-blue-700 transition">Play Now</a>
+                <a href="#about" class="hover:text-blue-700 transition">About</a>
+                <a href="#features" class="hover:text-blue-700 transition">Features</a>
+                <a href="#tips" class="hover:text-blue-700 transition">Tips</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 页面标题区 -->
+    <header class="header-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Monster Survivors</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Battle endless waves of monsters in this thrilling roguelike survival game!</p>
+            <a href="#game" class="btn-primary px-8 py-3 rounded-full text-lg font-semibold inline-block">Play Now</a>
+        </div>
+    </header>
+
+    <!-- 游戏区域 -->
+    <section id="game" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Play Monster Survivors Online</h2>
+            <div class="game-container">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                    class="game-iframe"
+                    title="Monster Survivors Game" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏介绍 -->
+    <section id="about" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">About Monster Survivors</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg mb-6">Monster Survivors is an intense roguelike survival game where your objective is simple yet challenging: survive as long as possible against relentless waves of monsters. As you defeat enemies, you'll gain experience points, level up, and unlock powerful new abilities and weapons to enhance your survival chances.</p>
+                <p class="text-lg mb-6">Drawing inspiration from popular roguelike games, Monster Survivors perfectly blends strategic decision-making with fast-paced action. Every playthrough offers a unique experience with procedurally generated environments and randomized power-ups, ensuring no two games are ever the same.</p>
+                <p class="text-lg">With its addictive gameplay loop and progressively increasing difficulty, Monster Survivors will continuously test your reflexes, strategic thinking, and adaptability as you strive to survive longer with each attempt.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏特点 -->
+    <section id="features" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Game Features</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Endless Survival Action</h3>
+                    <p>Face increasingly difficult waves of monsters in this challenging roguelike experience where survival is measured in minutes and seconds.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Dynamic Character Progression</h3>
+                    <p>Level up your character, unlock new abilities, and discover powerful weapon combinations to overcome the relentless monster hordes.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Diverse Enemy Ecosystem</h3>
+                    <p>Battle against various monster types, each with unique behaviors, strengths, and attack patterns that will keep you strategizing on your feet.</p>
+                </div>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Procedural World Generation</h3>
+                    <p>Every playthrough features procedurally generated environments and power-up opportunities, ensuring a fresh challenge every time you play.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏攻略 -->
+    <section id="tips" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Survival Tips</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Stay Mobile</h3>
+                    <p>Remaining stationary is a recipe for disaster. Continuously move around the map to avoid being surrounded and overwhelmed by monster swarms.</p>
+                </div>
+                <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Strategic Upgrades</h3>
+                    <p>When leveling up, prioritize abilities that complement your playstyle and create powerful synergies with your existing weapons and skills.</p>
+                </div>
+                <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Resource Management</h3>
+                    <p>Make sure to collect all experience gems and power-ups dropped by defeated monsters to accelerate your progression and maintain your advantage.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Anticipate Difficulty Spikes</h3>
+                    <p>Be prepared for major difficulty increases at certain time intervals. Tougher, more numerous monsters will appear as you progress through your survival run.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关游戏 -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">More Games You'll Love</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Zombie Defense</h3>
+                        <p class="text-gray-600 mb-4">Defend your base against hordes of zombies in this strategic tower defense game.</p>
+                        <a href="#" class="text-blue-600 hover:underline">Play Now</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Dragon Hunter</h3>
+                        <p class="text-gray-600 mb-4">Embark on an epic quest to slay dragons and save the realm from destruction.</p>
+                        <a href="#" class="text-blue-600 hover:underline">Play Now</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-200"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Space Explorer</h3>
+                        <p class="text-gray-600 mb-4">Navigate through dangerous asteroid fields and battle alien fleets in this space adventure.</p>
+                        <a href="#" class="text-blue-600 hover:underline">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">GamePapa</h2>
+                    <p class="text-gray-400">© 2023 gamepapa.online. All rights reserved.</p>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+                    <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-400 transition">Terms of Service</a>
+                    <a href="#" class="hover:text-blue-400 transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
