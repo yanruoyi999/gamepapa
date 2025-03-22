@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的书签导航</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入字体图标库 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <!-- 引入网站图标获取API -->
+    <script src="https://cdn.jsdelivr.net/npm/favicon@0.0.2/index.min.js"></script>
+</head>
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <div class="container">
+            <h1>我的书签导航</h1>
+            <!-- 搜索框 -->
+            <div class="search-box">
+                <input type="text" id="search" placeholder="搜索书签...">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="container">
+        <!-- 常用书签区域 -->
+        <div class="bookmark-section">
+            <h2><i class="fa fa-star"></i> 常用</h2>
+            <div class="bookmark-grid">
+                <a href="https://www.deepseek.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://www.deepseek.com/favicon.ico" alt="DeepSeek" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>DeepSeek</h3>
+                        <p>探索未至之境</p>
+                    </div>
+                </a>
+                
+                <a href="https://api.deepseek.com/prompts" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://api.deepseek.com/favicon.ico" alt="提示库" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>提示库 | DeepSeek API</h3>
+                        <p>DeepSeek API 文档</p>
+                    </div>
+                </a>
+                
+                <a href="https://yuanbao.qq.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://yuanbao.qq.com/favicon.ico" alt="腾讯元宝" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>腾讯元宝</h3>
+                        <p>轻松工作多点生活</p>
+                    </div>
+                </a>
+                
+                <a href="https://kimi.ai/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://kimi.ai/favicon.ico" alt="Kimi.ai" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Kimi.ai</h3>
+                        <p>会推理解析，能深度思考的AI助手</p>
+                    </div>
+                </a>
+                
+                <a href="https://console.volcengine.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://console.volcengine.com/favicon.ico" alt="火山引擎控制台" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>火山引擎控制台</h3>
+                        <p>火山引擎服务平台</p>
+                    </div>
+                </a>
+                
+                <!-- 更多常用书签... -->
+            </div>
+        </div>
+
+        <!-- 人工智能书签区域 -->
+        <div class="bookmark-section">
+            <h2><i class="fa fa-robot"></i> 人工智能</h2>
+            <div class="bookmark-grid">
+                <a href="https://www.deepseek.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://www.deepseek.com/favicon.ico" alt="DeepSeek" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>DeepSeek</h3>
+                        <p>探索未至之境</p>
+                    </div>
+                </a>
+                
+                <a href="https://yuanbao.qq.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://yuanbao.qq.com/favicon.ico" alt="腾讯元宝" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>腾讯元宝</h3>
+                        <p>轻松工作多点生活</p>
+                    </div>
+                </a>
+                
+                <a href="https://kimi.ai/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://kimi.ai/favicon.ico" alt="Kimi.ai" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Kimi.ai</h3>
+                        <p>会推理解析，能深度思考的AI助手</p>
+                    </div>
+                </a>
+                
+                <a href="https://login.volcengine.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://login.volcengine.com/favicon.ico" alt="账号登录-火山引擎" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>账号登录-火山引擎</h3>
+                        <p>火山引擎登录页面</p>
+                    </div>
+                </a>
+                
+                <a href="https://chatboxai.app/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://chatboxai.app/favicon.ico" alt="Chatbox AI" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Chatbox AI官网</h3>
+                        <p>办公学习的AI好助手，全平台AI客户端</p>
+                    </div>
+                </a>
+                
+                <!-- 更多AI书签... -->
+            </div>
+        </div>
+
+        <!-- 需求关键词书签区域 -->
+        <div class="bookmark-section">
+            <h2><i class="fa fa-key"></i> 需求关键词</h2>
+            <div class="bookmark-grid">
+                <a href="#" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="images/default-icon.png" alt="搜索建议">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>搜索建议</h3>
+                        <p>关键词搜索建议工具</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.toolify.ai/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://www.toolify.ai/favicon.ico" alt="Toolify" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>收入最高的 AI 网站</h3>
+                        <p>Toolify - 高收入AI网站分析</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="images/default-icon.png" alt="AI 工具请求">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>AI 工具请求</h3>
+                        <p>AI工具需求分析平台</p>
+                    </div>
+                </a>
+                
+                <a href="https://ahrefs.com/keyword-difficulty-checker" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://ahrefs.com/favicon.ico" alt="Ahrefs" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>免费关键词难度检查器</h3>
+                        <p>Ahrefs - SEO关键词分析工具</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 上站必备区域 -->
+        <div class="bookmark-section">
+            <h2><i class="fa fa-wrench"></i> 上站必备</h2>
+            
+            <!-- 获取子分类 -->
+            <h3 class="sub-category"><i class="fa fa-search"></i> 獲取</h3>
+            <div class="bookmark-grid">
+                <a href="https://lean.to/domains" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://lean.to/favicon.ico" alt="精益域名搜索" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>精益域名搜索</h3>
+                        <p>在几秒钟内搜索并注册可用的域名</p>
+                    </div>
+                </a>
+                
+                <a href="https://query.domains/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://query.domains/favicon.ico" alt="Query.Domains" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Query.Domains</h3>
+                        <p>根据 whois 查询免费批量检查域名可用性</p>
+                    </div>
+                </a>
+                
+                <a href="https://instantdomainsearch.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://instantdomainsearch.com/favicon.ico" alt="即时域名搜索" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>即时域名搜索</h3>
+                        <p>域名搜索服务</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.virustotal.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://www.virustotal.com/favicon.ico" alt="VirusTotal" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>VirusTotal</h3>
+                        <p>文件和URL安全检测工具</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 域名注册子分类 -->
+            <h3 class="sub-category"><i class="fa fa-globe"></i> 域名注册</h3>
+            <div class="bookmark-grid">
+                <a href="https://spaceship.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://spaceship.com/favicon.ico" alt="Spaceship" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Spaceship</h3>
+                        <p>启动您的网站、想法和未来</p>
+                    </div>
+                </a>
+                
+                <a href="https://porkbun.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://porkbun.com/favicon.ico" alt="porkbun" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>porkbun.com</h3>
+                        <p>一次奇怪而令人满意的体验</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.namecheap.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://www.namecheap.com/favicon.ico" alt="Namecheap" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Namecheap</h3>
+                        <p>从 0.99 美元起注册廉价域名</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 网站托管子分类 -->
+            <h3 class="sub-category"><i class="fa fa-server"></i> 网站托管</h3>
+            <div class="bookmark-grid">
+                <a href="https://github.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://github.com/favicon.ico" alt="GitHub" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>GitHub</h3>
+                        <p>代码托管和开发协作平台</p>
+                    </div>
+                </a>
+                
+                <a href="https://console.cloud.tencent.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://console.cloud.tencent.com/favicon.ico" alt="腾讯云" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>腾讯云账户主页</h3>
+                        <p>云服务管理控制台</p>
+                    </div>
+                </a>
+                
+                <a href="https://vercel.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://vercel.com/favicon.ico" alt="Vercel" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Vercel</h3>
+                        <p>使用 Frontend Cloud 构建和部署最佳 Web 体验</p>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- 数据后台子分类 -->
+            <h3 class="sub-category"><i class="fa fa-chart-line"></i> 数据后台</h3>
+            <div class="bookmark-grid">
+                <a href="https://search.google.com/search-console" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://search.google.com/favicon.ico" alt="Google 搜索控制台" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Google 搜索控制台</h3>
+                        <p>网站SEO监控工具</p>
+                    </div>
+                </a>
+                
+                <a href="https://analytics.google.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://analytics.google.com/favicon.ico" alt="Google Analytics" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>分析</h3>
+                        <p>Google Analytics 网站分析工具</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.bing.com/webmasters/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://www.bing.com/favicon.ico" alt="Bing 网站管理员工具" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Bing 网站管理员工具</h3>
+                        <p>必应搜索引擎优化工具</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 对标书签区域 -->
+        <div class="bookmark-section">
+            <h2><i class="fa fa-balance-scale"></i> 对标</h2>
+            <div class="bookmark-grid">
+                <a href="#" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="images/default-icon.png" alt="定价草案">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>定价草案、评论、替代方案</h3>
+                        <p>AI 图像生成</p>
+                    </div>
+                </a>
+                
+                <a href="https://openai.wiki/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://openai.wiki/favicon.ico" alt="openAI维基百科" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>openAI维基百科</h3>
+                        <p>免费人工智能教程资源和开源模型下载</p>
+                    </div>
+                </a>
+                
+                <a href="https://www.vondy.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://www.vondy.com/favicon.ico" alt="Vondy" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>Vondy</h3>
+                        <p>下一代人工智能应用程序</p>
+                    </div>
+                </a>
+                
+                <a href="https://chatexcel.com/" class="bookmark-item" target="_blank">
+                    <div class="bookmark-icon">
+                        <img src="https://chatexcel.com/favicon.ico" alt="ChatExcel" onerror="this.src='images/default-icon.png'">
+                    </div>
+                    <div class="bookmark-info">
+                        <h3>ChatExcel</h3>
+                        <p>AI Excel 处理和数据分析</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <p>我的个人书签导航 &copy; 2023</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript文件 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
