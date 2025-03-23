@@ -1,437 +1,200 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>游戏爸爸 - 精选实用网站导航，提升你的工作与生活效率 | GamePapa.com</title>
-    <meta name="description" content="游戏爸爸(GamePapa)是一个精心整理的网站导航平台，汇集人工智能、开发工具、域名注册等多种高效实用网站，帮助你快速找到所需资源，提升工作与生活效率。">
-    <link rel="canonical" href="https://gamepapa.com" />
+    <title>Monster Survivors - Survive the Monster Apocalypse in this Thrilling Online Game</title>
+    <meta name="description" content="Monster Survivors is an action-packed survival game where you must overcome waves of monsters with evolving abilities and weapons.">
+    <link rel="canonical" href="https://monstersurvivors.com/">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        /* 基础样式设置 */
+        /* 苹果风格配色 */
         :root {
-            --apple-blue: #007AFF;
-            --apple-gray: #F5F5F7;
-            --apple-dark: #1D1D1F;
-            --apple-light: #FBFBFD;
-            --apple-accent: #06C;
-            --apple-green: #34C759;
+            --apple-blue: #0066CC;
+            --apple-light-gray: #F5F5F7;
+            --apple-dark-gray: #86868B;
             --apple-red: #FF3B30;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-        
         body {
-            background-color: var(--apple-light);
-            color: var(--apple-dark);
-            line-height: 1.5;
-            padding-bottom: 50px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--apple-light-gray);
+            color: #333;
         }
         
-        /* 头部样式 */
-        header {
-            background-color: var(--apple-blue);
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        .header-bg {
+            background: linear-gradient(135deg, var(--apple-blue), #004080);
         }
         
-        h1 {
-            margin: 10px 0;
-            font-size: 2.2rem;
-            font-weight: 700;
+        .game-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
         }
         
-        .site-description {
-            max-width: 800px;
-            margin: 10px auto 20px;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* 搜索栏样式 */
-        .search-container {
-            max-width: 600px;
-            margin: 15px auto;
-            position: relative;
-        }
-        
-        .search-input {
+        .game-iframe {
             width: 100%;
-            padding: 12px 20px;
-            border-radius: 30px;
+            height: 600px;
             border: none;
-            font-size: 16px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            outline: none;
-        }
-        
-        .search-input:focus {
-            box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.3);
-        }
-        
-        /* 主要内容区域 */
-        .content {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-        
-        /* 书签分类样式 */
-        .bookmarks-section {
-            margin-bottom: 40px;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            overflow: hidden;
-        }
-        
-        h2 {
-            padding: 15px 20px;
-            background-color: var(--apple-blue);
-            color: white;
-            font-weight: 600;
-            border-radius: 12px 12px 0 0;
-            font-size: 1.5rem;
-        }
-        
-        .bookmarks-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            padding: 20px;
-        }
-        
-        .bookmark-card {
-            background-color: var(--apple-gray);
             border-radius: 8px;
-            padding: 15px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
         
-        .bookmark-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .bookmark-card a {
-            color: var(--apple-accent);
-            text-decoration: none;
-            font-weight: 500;
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        
-        .bookmark-card a:hover {
-            text-decoration: underline;
-        }
-        
-        /* 页脚样式 */
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-        
-        /* 响应式设计 */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            .site-description {
-                font-size: 1rem;
-            }
-            
-            .bookmarks-grid {
-                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            }
-            
-            h2 {
-                font-size: 1.3rem;
+            .game-iframe {
+                height: 450px;
             }
         }
         
         @media (max-width: 480px) {
-            header {
-                padding: 15px 10px;
+            .game-iframe {
+                height: 350px;
             }
-            
-            h1 {
-                font-size: 1.5rem;
-            }
-            
-            .bookmarks-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .search-input {
-                padding: 10px 15px;
-            }
+        }
+        
+        .btn-primary {
+            background-color: var(--apple-blue);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #004b99;
+            transform: translateY(-2px);
+        }
+        
+        .feature-card {
+            border-left: 4px solid var(--apple-blue);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>游戏爸爸 - 实用网站导航</h1>
-        <p class="site-description">精心整理的优质网站导航，涵盖人工智能、开发工具、域名注册等多个领域，助您提升工作与生活效率。</p>
-        
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="搜索书签..." id="searchInput">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-blue-700">MonsterSurvivors</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#game" class="hover:text-blue-700 transition">Play Now</a>
+                <a href="#about" class="hover:text-blue-700 transition">About</a>
+                <a href="#features" class="hover:text-blue-700 transition">Features</a>
+                <a href="#tips" class="hover:text-blue-700 transition">Tips</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 页面标题区 -->
+    <header class="header-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Monster Survivors</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Survive the monster apocalypse in this thrilling roguelike adventure game!</p>
+            <a href="#game" class="btn-primary px-8 py-3 rounded-full text-lg font-semibold inline-block">Play Now</a>
         </div>
     </header>
-    
-    <div class="content">
-        <!-- 常用书签 -->
-        <div class="bookmarks-section">
-            <h2>常用</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://deepseek.com" target="_blank">DeepSeek - 探索未至之境</a>
+
+    <!-- 游戏区域 -->
+    <section id="game" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Play Monster Survivors Online</h2>
+            <div class="game-container">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unitsurvivors/index-og.html" 
+                    class="game-iframe"
+                    title="Monster Survivors Game" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏介绍 -->
+    <section id="about" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">About Monster Survivors</h2>
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg mb-6">Monster Survivors is an action-packed roguelike game where your goal is simple: survive as long as possible against endless waves of monsters. As you defeat enemies, you'll gain experience, level up, and unlock powerful new abilities and weapons.</p>
+                <p class="text-lg mb-6">Inspired by popular roguelike survival games, Monster Survivors combines strategic gameplay with fast-paced action. Every run is different with procedurally generated maps and randomized power-ups, ensuring a unique experience every time you play.</p>
+                <p class="text-lg">With its addictive gameplay loop and progressive difficulty, Monster Survivors will test your reflexes and strategic thinking as you fight to survive just a little bit longer with each attempt.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游戏特点 -->
+    <section id="features" class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Game Features</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Endless Survival Gameplay</h3>
+                    <p>Face waves of increasingly difficult monsters and see how long you can survive in this challenging roguelike experience.</p>
                 </div>
-                <div class="bookmark-card">
-                    <a href="https://api.deepseek.com" target="_blank">提示库 | DeepSeek API 文档</a>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Character Progression</h3>
+                    <p>Level up your character, unlock new abilities, and discover powerful weapon combinations to overcome the monster hordes.</p>
                 </div>
-                <div class="bookmark-card">
-                    <a href="https://yuanbao.qq.com" target="_blank">腾讯元宝 - 轻松工作多点生活</a>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Diverse Enemy Types</h3>
+                    <p>Battle against various monster types, each with unique behaviors and attack patterns that will keep you on your toes.</p>
                 </div>
-                <div class="bookmark-card">
-                    <a href="https://kimi.ai" target="_blank">Kimi.ai - 会推理解析，能深度思考的AI助手</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://console.volcengine.com" target="_blank">火山引擎控制台</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://chatboxai.app" target="_blank">Chatbox AI官网：办公学习的AI好助手</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://cherrystudio.net" target="_blank">Cherry Studio - 全能的AI助手</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://shengcaiyoushu.com" target="_blank">生财有术-知识星球</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://yingdao.com" target="_blank">影刀AI Power | 帮助企业将AI用起来</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://feishu.cn/app-center" target="_blank">飞书应用中心 - 探索解决方案</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://openai.com/pricing" target="_blank">定价 - OpenAI API</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://copilot.microsoft.com" target="_blank">Microsoft Copilot：你的 AI 助手</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://canva.com" target="_blank">首页 - Canva可画</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://github.com" target="_blank">GitHub</a>
+                <div class="feature-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Randomly Generated Maps</h3>
+                    <p>Every playthrough features procedurally generated environments, ensuring a fresh challenge every time you play.</p>
                 </div>
             </div>
         </div>
-        
-        <!-- 游戏爸爸 -->
-        <div class="bookmarks-section">
-            <h2>游戏爸爸</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://gamepapa.com" target="_blank">游戏爸爸</a>
+    </section>
+
+    <!-- 游戏攻略 -->
+    <section id="tips" class="py-12 md:py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Survival Tips</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Keep Moving</h3>
+                    <p>Standing still is a death sentence. Always stay on the move to avoid being surrounded by monsters.</p>
                 </div>
-                <div class="bookmark-card">
-                    <a href="https://xuanji.ai" target="_blank">玄机 - 现代化运势预测平台</a>
+                <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Prioritize Upgrades</h3>
+                    <p>When leveling up, focus on synergistic abilities that complement your playstyle and weapon choices.</p>
                 </div>
-            </div>
-        </div>
-        
-        <!-- 对标 -->
-        <div class="bookmarks-section">
-            <h2>对标</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://ai-image-generator.com" target="_blank">定价草案、评论、替代方案 - AI 图像生成</a>
+                <div class="mb-8 bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Collect Experience Gems</h3>
+                    <p>Make sure to collect all experience gems dropped by defeated monsters to level up faster and gain an edge.</p>
                 </div>
-                <div class="bookmark-card">
-                    <a href="https://openai.wiki" target="_blank">openAI维基百科 - 免费人工智能资源</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://vondy.com" target="_blank">Vondy：下一代人工智能应用程序</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://chatexcel.com" target="_blank">ChatExcel AI Excel 处理和数据分析</a>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold mb-3">Watch the Clock</h3>
+                    <p>Be prepared for difficulty spikes at certain time intervals. Tougher monsters will appear as you progress.</p>
                 </div>
             </div>
         </div>
-        
-        <!-- 人工智能 -->
-        <div class="bookmarks-section">
-            <h2>人工智能</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://deepseek.com" target="_blank">DeepSeek - 探索未至之境</a>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold mb-2">Monster Survivors</h2>
+                    <p class="text-gray-400">© 2023 MonsterSurvivors.com. All rights reserved.</p>
                 </div>
-                <div class="bookmark-card">
-                    <a href="https://yuanbao.qq.com" target="_blank">腾讯元宝 - 轻松工作多点生活</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://kimi.ai" target="_blank">Kimi.ai - 会推理解析，能深度思考的AI助手</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://console.volcengine.com" target="_blank">账号登录-火山引擎</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://chatboxai.app" target="_blank">Chatbox AI官网：办公学习的AI好助手</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://cherrystudio.net" target="_blank">Cherry Studio - 全能的AI助手</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://openai.com" target="_blank">OpenAI</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://copilot.microsoft.com" target="_blank">Microsoft Copilot：你的 AI 助手</a>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-blue-400 transition">Terms of Service</a>
+                    <a href="#" class="hover:text-blue-400 transition">Contact</a>
                 </div>
             </div>
         </div>
-        
-        <!-- 需求关键词 -->
-        <div class="bookmarks-section">
-            <h2>需求关键词</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://toolify.ai" target="_blank">收入最高的 AI 和高收入 AI 网站 - Toolify</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://ahrefs.com" target="_blank">免费关键词难度检查器 - Ahrefs</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 上站必备 -->
-        <div class="bookmarks-section">
-            <h2>上站必备</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://leandomainsearch.com" target="_blank">精益域名搜索——在几秒钟内搜索并注册可用的域名</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://query.domains" target="_blank">Query.Domains：根据 whois 查询免费批量检查域名可用性</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://instantdomainsearch.com" target="_blank">即时域名搜索 | 域名搜索</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://virustotal.com" target="_blank">VirusTotal-主页</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 域名注册 -->
-        <div class="bookmarks-section">
-            <h2>域名注册</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://spaceship.com" target="_blank">启动您的网站、想法和未来 - Spaceship</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://porkbun.com" target="_blank">porkbun.com | 一次奇怪而令人满意的体验</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://namecheap.com" target="_blank">购买域名 - 从 0.99 美元起注册廉价域名 - Namecheap</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 网站托管 -->
-        <div class="bookmarks-section">
-            <h2>网站托管</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://github.com" target="_blank">GitHub</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://console.cloud.tencent.com" target="_blank">账户主页 | 云耀</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://vercel.com" target="_blank">Vercel：使用 Frontend Cloud 构建和部署最佳 Web 体验</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 数据后台 -->
-        <div class="bookmarks-section">
-            <h2>数据后台</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://search.google.com/search-console" target="_blank">欢迎使用 Google 搜索控制台</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://analytics.google.com" target="_blank">分析</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://bing.com/webmasters" target="_blank">Bing 网站管理员工具</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 竞品调研 -->
-        <div class="bookmarks-section">
-            <h2>竞品调研</h2>
-            <div class="bookmarks-grid">
-                <div class="bookmark-card">
-                    <a href="https://aitdk.com" target="_blank">AITDK：免费AI SEO工具，SEO的AI生成器</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://ahrefs.com/free-seo-tools" target="_blank">免费 SEO 工具 - 由 Ahrefs 制作</a>
-                </div>
-                <div class="bookmark-card">
-                    <a href="https://semrush.com" target="_blank">Semrush - 在线营销可以很简单</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <footer>
-        <p>© 2023-2024 游戏爸爸 (GamePapa.com) 版权所有 | 精选实用网站导航</p>
     </footer>
-    
-    <script>
-        // 搜索功能实现
-        document.getElementById('searchInput').addEventListener('keyup', function() {
-            const searchText = this.value.toLowerCase();
-            const cards = document.querySelectorAll('.bookmark-card');
-            
-            cards.forEach(card => {
-                const link = card.querySelector('a');
-                const linkText = link.textContent.toLowerCase();
-                
-                if (linkText.includes(searchText)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            // 处理空书签分类
-            document.querySelectorAll('.bookmarks-section').forEach(section => {
-                const visibleCards = section.querySelectorAll('.bookmark-card[style="display: block"], .bookmark-card:not([style])').length;
-                
-                if (visibleCards === 0) {
-                    section.style.display = 'none';
-                } else {
-                    section.style.display = 'block';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
