@@ -1,0 +1,101 @@
+name: Download X video 2075764484027932963
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install download tools
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade yt-dlp requests
+      - name: Download video
+        env:
+          TWEET_ID: '2075764484027932963'
+          TWEET_URL: 'https://x.com/shao__meng/status/2075764484027932963'
+        run: |
+          set -euo pipefail
+          mkdir -p output
+
+          if yt-dlp --no-playlist --merge-output-format mp4 -f 'bv*+ba/b' -o 'output/source.%(ext)s' "$TWEET_URL"; then
+            VIDEO_FILE="$(find output -maxdepth 1 -type f | head -n 1)"
+            mv "$VIDEO_FILE" "output/x_video_${TWEET_ID}.mp4"
+          else
+            python - <<'PY'
+          import json, os, pathlib, requests
+
+          tweet_id = os.environ['TWEET_ID']
+          endpoints = [
+              f'https://api.fxtwitter.com/status/{tweet_id}',
+              f'https://api.fxtwitter.com/shao__meng/status/{tweet_id}',
+              f'https://api.vxtwitter.com/shao__meng/status/{tweet_id}',
+          ]
+
+          def walk(value):
+              if isinstance(value, dict):
+                  if isinstance(value.get('url'), str) and '.mp4' in value['url']:
+                      yield value
+                  for child in value.values():
+                      yield from walk(child)
+              elif isinstance(value, list):
+                  for child in value:
+                      yield from walk(child)
+
+          session = requests.Session()
+          session.headers.update({'User-Agent': 'Mozilla/5.0'})
+          candidates = []
+          last_error = None
+          for endpoint in endpoints:
+              try:
+                  response = session.get(endpoint, timeout=30)
+                  response.raise_for_status()
+                  candidates.extend(walk(response.json()))
+                  if candidates:
+                      break
+              except Exception as exc:
+                  last_error = exc
+
+          if not candidates:
+              raise RuntimeError(f'No MP4 URL found: {last_error}')
+
+          def score(item):
+              width = item.get('width') or 0
+              height = item.get('height') or 0
+              bitrate = item.get('bitrate') or item.get('bit_rate') or 0
+              return (width * height, bitrate)
+
+          best = max(candidates, key=score)
+          video_url = best['url']
+          output = pathlib.Path('output') / f'x_video_{tweet_id}.mp4'
+          with session.get(video_url, stream=True, timeout=120) as response:
+              response.raise_for_status()
+              with output.open('wb') as fh:
+                  for chunk in response.iter_content(chunk_size=1024 * 1024):
+                      if chunk:
+                          fh.write(chunk)
+          print(json.dumps({'video_url': video_url, 'bytes': output.stat().st_size}))
+          PY
+          fi
+
+          test -s "output/x_video_${TWEET_ID}.mp4"
+          file "output/x_video_${TWEET_ID}.mp4"
+          ls -lh output
+      - name: Upload MP4
+        uses: actions/upload-artifact@v4
+        with:
+          name: x-video-2075764484027932963
+          path: output/x_video_2075764484027932963.mp4
+          if-no-files-found: error
+          retention-days: 1
